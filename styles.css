@@ -1,106 +1,106 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  background: url("background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-/* Transparenter Container für Lesbarkeit */
-.login-container {
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-}
-
-.login-container h2 {
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.input-group {
-  text-align: left;
-  margin-bottom: 1.2rem;
-}
-
-.input-group label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.input-group input {
+  height: 100%;
   width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s;
-  font-size: 1rem;
+  max-width: 500px;
+  padding: 40px 20px;
+  position: relative;
 }
 
-.input-group input:focus {
-  border-color: #74ebd5;
-  outline: none;
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content p {
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.8;
+  word-wrap: break-word;
 }
 
 button {
   width: 100%;
-  padding: 0.9rem;
-  background-color: #4a90e2;
+  max-width: 300px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
   color: white;
+  background-color: #4cd964;
   border: none;
-  border-radius: 8px;
-  font-size: 1.05rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background 0.3s;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #357ABD;
+  background-color: #3ac451;
 }
 
-.signup-link {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+/* Fortschrittsbalken oben */
+.progress-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
 }
 
-.signup-link a {
-  color: #4a90e2;
-  text-decoration: none;
+.progress-bar {
+  height: 100%;
+  background-color: #4cd964;
+  transition: width 0.4s ease;
 }
 
-.signup-link a:hover {
-  text-decoration: underline;
+.step-info {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 500;
 }
 
-/* Mobilfreundlich */
-@media screen and (max-width: 480px) {
-  .login-container {
-    padding: 1.5rem 1rem;
-    border-radius: 12px;
-  }
+.camera-button {
+  display: inline-block;
+  background-color: #4cd964;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin: 20px 0; /* ✅ Zeilenabstand oben & unten */
+}
 
-  .input-group input {
-    font-size: 1rem;
-    padding: 0.6rem;
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
+.camera-button:hover {
+  background-color: #3ac451;
 }

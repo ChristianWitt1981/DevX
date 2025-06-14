@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kennenlernen</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-container">
-    <h2>Willkommen in der Natur 👋</h2>
-    <form action="creator.html" method="POST">
-      <div class="input-group">
-        <label for="username">Benutzername</label>
-        <input type="text" id="username" name="username" required />
-      </div>
-      <div class="input-group">
-        <label for="password">Passwort</label>
-        <input type="password" id="password" name="password" required />
-      </div>
-      <button type="submit">Login</button>
-      <p class="signup-link">Noch keinen Account? <a href="#">Registrieren</a></p>
-    </form>
+  <!-- Fortschrittsbalken -->
+  <div class="progress-container">
+    <div class="progress-bar" style="width: 16%;"></div>
+  </div>
+
+  <div class="wrapper">
+    <!-- Schrittanzeige -->
+    <div class="step-info">Schritt 1 von 6</div>
+
+    <div class="content">
+      <p>
+        Hallo Unbekannter.<br>
+        Es freut mich, dich kennenzulernen... 😊<br><br>
+        Drücke auf „Weiter“...
+      </p>
+    </div>
+
+    <button onclick="window.location.href='weiter.html'">Weiter</button>
   </div>
 </body>
 </html>
