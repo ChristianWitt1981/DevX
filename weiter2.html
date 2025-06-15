@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selfie senden – Schritt 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress-container">
+    <div class="progress-bar" style="width: 50%;"></div>
+  </div>
+
+  <div class="wrapper">
+    <div class="step-info">Schritt 3 von 6</div>
+
+    <div class="content">
+      <p>
+        Bitte mach ein Selfie 📷<br>
+        damit ich dich sehen kann..🤗
+      </p>
+
+      <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data" class="form-block">
+        <!-- Kameraaufnahme -->
+        <label for="cameraInput" class="camera-button">📸 Selfie aufnehmen</label>
+        <input id="cameraInput" type="file" name="selfie" accept="image/*" capture="user" style="display: none;" required>
+
+        <!-- Hinweis + Datei-Upload -->
+        <p style="margin: 10px 0;">oder wähle ein vorhandenes Bild:</p>
+        <input type="file" name="selfie" accept="image/*" required>
+      </form>
+    </div>
+
+    <!-- Button außerhalb, löst Formular aus -->
+    <button onclick="window.location.href='weiter3.html'">Weiter</button>
+  </div>
+</body>
+</html>
