@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Etwas über dich – Schritt 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fortschrittsbalken -->
+  <div class="progress-container">
+    <div class="progress-bar" style="width: 75%;"></div>
+  </div>
+
+  <div class="wrapper">
+    <div class="step-info">Schritt 3 von 4</div>
+
+    <div class="content">
+      <p>
+        Jetzt bin ich wirklich gespannt auf dich! 😄<br><br>
+        Erzähl mir doch ein wenig über dich – und wenn du magst,<br>
+        kannst du mir später auch ein Selfie per E-Mail schicken. 😊<br><br>
+        Ich freue mich auf deine Nachricht! 📩
+      </p>
+
+      <!-- Formular für Formspree -->
+      <form action="https://formspree.io/f/mldnwbjg" method="POST" class="form-block">
+        <!-- Weiterleitung nach dem Absenden -->
+        <input type="hidden" name="_redirect" value="https://develx.netlify.app/weiter3.html">
+
+        <!-- Name -->
+        <label>
+          Dein Name:<br>
+          <input type="text" name="name" required />
+        </label><br><br>
+
+        <!-- E-Mail -->
+        <label>
+          Deine E-Mail-Adresse:<br>
+          <input type="email" name="email" required />
+        </label><br><br>
+
+        <!-- Nachricht -->
+        <label>
+          Eine kurze Nachricht:<br><br>
+          <textarea name="nachricht" rows="8" placeholder="Erzähl mir etwas von dir …"></textarea>
+        </label><br><br>
+
+        <!-- Absenden -->
+        <button type="submit">Absenden</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
