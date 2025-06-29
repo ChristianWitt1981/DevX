@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <img src="img/logo.png" alt="uscanme Logo" class="logo" />
+      <h2 class="login-title">Login</h2>
+
+      <!-- Fehleranzeige -->
+      <div id="error-message" class="error-message" style="display: none;"></div>
+
+      <form id="loginForm" class="login-form">
+        <input type="text" name="username" id="username" placeholder="Benutzername" required />
+        <input type="password" name="password" id="password" placeholder="Passwort" required />
+      </form>
+    </div>
+
+    <!-- Nur dieser Button bleibt -->
+    <button onclick="validateLogin()">Einloggen</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function validateLogin() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const errorBox = document.getElementById("error-message");
+
+      if (username === "" || password === "") {
+        errorBox.textContent = "Bitte fülle beide Felder aus.";
+        errorBox.style.display = "block";
+      } else {
+        errorBox.style.display = "none";
+        alert("Unbekannter Nutzer");
+      }
+    }
+  </script>
+</body>
+</html>
